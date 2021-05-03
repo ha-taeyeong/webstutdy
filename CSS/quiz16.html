@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>quiz16</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        html {
+            font-size: 12px;
+            font-family: Dotum,'돋움',Helvetica,sans-serif;
+        }
+        body {
+            background-color: #f5f6f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 460px;
+            margin: 0 auto;
+        }
+        header {
+            /* 부모인 .container 기준 */
+            width: 100%;
+            padding: 60px 0 20px;
+        }
+        header > h1 {
+            width: 240px;
+            height: 44px;
+            margin: 0 auto;
+            background-image: url(images/naver.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .join_title {
+            padding: 19px 0 8px;
+            font-size: 14px;
+            font-weight: 700;
+            
+        }
+        label {
+            cursor: pointer;
+        }
+        .ps_box {
+            width: 100%;
+            height: 51px;
+            border: 1px solid #dadada;
+            background-color: #ffffff;
+            padding: 10px 110px 10px 14px;
+            box-sizing: border-box;
+            /* 자식요소들의 absoulte을 위해서 */
+            position: relative;
+        }
+        .int {
+            width: 100%;
+            height: 29px;
+            padding-right: 25px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+        .step_url {
+            /* 원래 자리 무시하고 두고 싶은 곳에 두겠다. */
+            position: absolute;
+            top: 16px;
+            right: 13px;
+            font-size: 15px;
+            color: #8e8e8e;
+            line-height: 18px;
+        }
+        .yyyymmdd {
+            display: flex;
+            justify-content: space-between;
+        }
+        .ps_box2 {
+            width: 30%;
+            height: 51px;
+            border: 1px solid #dadada;
+            background-color: #ffffff;
+            padding: 10px 10px 10px 14px;
+            box-sizing: border-box;
+        }
+        .int2 {
+            width: 100%;
+            height: 29px;
+            line-height: 29px;
+            padding-right: 5px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+        .no_padding_ps_box {
+            padding-right: 10px; 
+        }
+        .term_choice {
+            font-size: 12px;
+            font-weight: 400;
+            color: #8e8e8e;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <!-- 네이버로고 -->
+        <header>
+            <h1></h1>
+        </header>
+        <!-- 본문양식 -->
+        <section>
+            <form method="post">
+                <!-- 아이디label,input -->
+                <div class="join_row">
+                    <!-- 아이디label -->
+                    <h3 class="join_title">
+                        <label for="id">아이디</label>
+                    </h3>
+                    <!-- 아이디input상자 -->
+                    <div class="ps_box">
+                        <input type="text" id="id" class="int" name="id">
+                        <!--request.getParameter("id")-->
+                        <span class="step_url">@naver.com</span>
+                    </div>
+                </div>
+                <!-- 비밀번호label,input -->
+                <div class="join_row">
+                    <!-- 비밀번호label-->
+                    <h3 class="join_title">
+                        <label for="pwd">비밀번호</label>
+                    </h3>
+                    <!-- 비밀번호input상자 -->
+                    <div class="ps_box">
+                        <input type="password" id="pwd" class="int" name="pwd">
+                        <span class="step_url"><i class="fas fa-unlock"></i></span>
+                    </div>
+                </div>
+                <!-- 비밀번호재확인label,input -->
+                <div class="join_row">
+                    <!-- 비밀번호재확인label -->
+                    <h3 class="join_title">
+                        <label for="re_pwd">비밀번호 재확인</label>
+                    </h3>
+                    <!-- 비밀번호재확인input상자-->
+                    <div class="ps_box">
+                        <input type="password" id="re_pwd" class="int" name="re_pwd">
+                        <span class="step_url"><i class="far fa-check-circle"></i></span>
+                    </div>
+                </div>
+                <!-- 이름label,input -->
+                <div class="join_row">
+                    <h3 clas="join_title">
+                        <label for="name">이름</label>
+                    </h3>
+                    <!-- 이름input상자 -->
+                    <div class="ps_box no_padding_ps_box">
+                        <input type="text" id="name" class="int" name="name">      
+                    </div>
+                </div>
+                <!-- 생년월일label,input,select -->
+                <div class="join_row">
+                    <!-- 생년월일label -->
+                    <h3 class="join_title">
+                        <label for="yy">생년월일</label>
+                    </h3>
+                    <!-- 년,월,일input상자 -->
+                    <div class="yyyymmdd">
+                        <div class="ps_box2"> 
+                            <input type="text" id="yyyy" class="int2" name="yyyy" placeholder="년(4자)">
+                        </div>
+                        <div class="ps_box2">
+                            <select class="int2" id="mm">
+                                <option value="">월</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        <div class="ps_box2">
+                            <input type="text" id="dd" class="int2" name="dd" placeholder="일">
+                        </div>
+                    </div>
+                </div>
+                <!-- 성별label,input -->
+                <div class="join_row">
+                    <!-- 성별label -->
+                    <h3 class="join_title">
+                        <label for="gender">성별</label>
+                    </h3>
+                    <!-- 성별input상자 -->
+                    <div class="ps_box no_padding_ps_box">
+                        <select name="gender" class="int">
+                            <option value="">성별</option>
+                            <option value="male">남자</option>
+                            <option value="female">여자</option>
+                            <option value="unisex">선택 안함</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- 본인확인이메일(선택)label,input -->
+            </form>
+        </section>
+        
+        <!-- 아래2줄 -->
+        <footer>
+        
+        </footer>
+    </div>
+</body>
+</html>

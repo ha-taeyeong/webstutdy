@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<table Id="border" border="1">
+		<p Id="table-name">다이얼</p>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td >4</td>
+			<td >5</td>
+			<td >6</td>
+		</tr>
+		<tr>
+			<td >7</td>
+			<td >8</td>
+			<td >9</td>
+		</tr>
+		<tr>
+			<td >*</td>
+			<td >0</td>
+			<td >#</td>
+		</tr>
+	</table>
+	
+	<script>
+		var p = document.getElementById('table-name');
+		p.style.textAlign='center';
+		p.style.color='red';
+		p.style.marginBottom='0';
+		
+		var table = document.getElementById('border');
+		table.style.margin='0 auto';
+		table.style.width='200px';
+		table.style.height='300px';
+		table.style.textAlign='center';
+		table.style.borderCollapse='collapse';
+	</script>
+	<script>
+		var table = document.createElement('table');
+		var tbody = document.createElement('tbody');
+		table.appendChild(tbody);
+		var n = 1;
+		var row = 1;
+		while (row <= 4){
+			var tr = document.createElement('tr');
+			tbody.appendChild(tr);
+			var col = 1;
+			while (col <= 3) {
+				var td = document.createElement('td');
+				if (n == 10) { td.textContent = '*'; }
+				else if (n == 11) { td.textContent = '0'; }
+				else { td.textContent = n; }
+				tr.append(td);
+				n++;
+				col++;
+			}
+			row++;
+		}
+		document getElementById('table_box') appendChild(table);
+	</script>
+</body>
+</html>

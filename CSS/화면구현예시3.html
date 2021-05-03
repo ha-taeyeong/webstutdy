@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>화면구현예시3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        .container {
+            width: 512px;
+            height: 310px;
+            background-color: beige;
+            margin: auto;
+        }
+        .title > p{
+            width: 100%;
+            background-color: lightgray;
+            text-align: center;
+            color: black;
+            font-size: 25px;
+            box-shadow: 0 5px 5px gray;
+            margin-top: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .login {
+            width: 50%;
+            height: 75%;
+            float:left;
+        }
+        .link {
+            width: 50%;
+            height: 75%;
+            float:right;
+        }
+        .login_box {
+            width: 90%;
+            height: 20%;
+            background-color: #bab7b7;
+            border-radius: 3px;
+            margin-left: 15px;
+
+        }
+        span {
+            color: white;
+            margin-left: 20px;
+        }
+        input[type="text"]{
+            width: 70%;
+            height: 40%;
+            background-color: #bab7b7;
+            border: none;
+            outline: none;
+            color:black;
+            margin-top: 14px;
+            margin-left: 10px;
+        }
+        p {
+            text-align: right;
+            color: #bab7b7;
+            margin-top: 0;
+            margin-right: 10px;
+        }
+        #login {
+            width: 56%;
+            height: 20%;
+            border: none;
+            border-radius: 5px;
+            background-color: #cc315a;
+            color: white;
+            font-weight: 400;
+            margin-left : 100px;
+            margin-top : 5px;
+        }
+        #link_box1 {
+            width: 90%;
+            height: 40%;
+            border: none;
+            border-radius: 5px;
+            cursor:pointer;
+            font-size: 16px;
+            text-align: left;
+            background-color: #87e2ff;
+            color: white;
+            padding: 15px 0;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        #link_box2 {
+            width: 90%;
+            height: 40%;
+            border: none;
+            border-radius: 5px;
+            cursor:pointer;
+            font-size: 16px;
+            text-align: left;
+            background-color: blue;
+            color: white;
+            padding: 15px 0;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        #link_box3 {
+            width: 90%;
+            height: 40%;
+            border: none;
+            border-radius: 5px;
+            cursor:pointer;
+            font-size: 16px;
+            text-align: left;
+            background-color: red;
+            color: white;
+            padding: 15px 0;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <p>WELCOME</p>
+        </div>
+        <div class="login">
+            <!-- id -->
+            <div class="login_box">
+                <span>
+                    <i class="far fa-smile"></i>
+                </span>
+                <input type="text" placeholder="User or Email" name="id">
+            </div>
+            <p>Forgot your username?</p>
+            <!-- pwd -->
+            <div class="login_box">
+                <span>
+                    <i class="fas fa-unlock"></i>
+                </span>
+                <input type="text" placeholder="Password" name="pwd">
+            </div>
+            <p>Forgot your passord?</p>
+            <button id="login">LOGIN NOW</button>
+        </div>
+        <div class="link">
+            <form action="https://twitter.com/login">
+                <button id="link_box1">
+                    <span>
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                    Log in with Twitter
+                </button>
+            </form>
+            <form action="https://www.facebook.com/">
+                <button id="link_box2">
+                    <span>
+                        <i class="fab fa-facebook-f"></i>
+                    </span>
+                    Log in with Facebook
+                </button>
+            </form>
+            <form action="https://accounts.google.com/signin/v2/identifier?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2F%3F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                <button id="link_box3">
+                    <span>
+                        <i class="fab fa-google-plus-g"></i>
+                    </span>
+                    Log in with Google+
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

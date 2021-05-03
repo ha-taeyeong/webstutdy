@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>화면구현예시1</title>
+    <style>
+        .container {
+            margin: auto;
+            width: 520px;
+        }
+        #img {
+            margin: auto;
+            width: 98%;
+            height: 339px;
+            background-image: url(images/apple.jpg);
+            background-size: cover;
+            margin-bottom: 5px;
+        }
+        h4 {
+            margin: 0 auto;
+            padding: 5px;
+            background-color: black;
+            font-size: 12px;
+            color: white; 
+        }
+        .boxs {
+            border: 1px solid gray;
+            padding: 2px;
+        }
+        #box1 {
+            border-bottom: 1px solid gray;
+            text-align: center;
+        }
+        #box2 {
+            border-bottom: 1px solid gray;
+            text-align: center;
+        }
+        #box3 {
+            text-align: center;
+        }
+        span1 {
+            color: red;
+        }
+        span2 {
+            color: blue;
+        }
+        span3 {
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="img">
+        </div>
+        
+        <div class="boxs">
+            <h4>확인하세요.</h4>
+            <div id="box1">
+                <h3>
+                    <span1>주문 및 배송</span1>
+                    <br><br>
+                    <span2>오후 2시 이전</span2> 주문건은 당일 발송합니다.<br>
+                    2시 이후 주문건은 다음날 발송합니다(주말 제외)<br>
+                </h3>
+            </div>
+            <div id="box2">
+                <h3>
+                    <span1>교환 및 환불</span1>
+                    <br><br>
+                    불만족시 <span2>100% 환불</span2>해 드립니다.<br>
+                    고객센터로 전화주세요<br>
+                </h3>
+            </div>
+            <div id="box3">
+                <h3>
+                    <span1>고객센터</span1>
+                    <br><br>
+                    0000-0000<br>
+                    <span3>상담시간 : 오전 9시 ~ 오후 6시 (토/일, 공휴일 휴무)</span3>
+                </h3>
+            </div>
+        </div>   
+    </div>
+</body>
+</html>

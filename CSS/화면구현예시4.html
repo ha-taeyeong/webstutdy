@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>화면구현예시4</title>
+    <style>
+        .container{
+            width : 600px;
+            height: 670px;
+            margin: auto;
+        }
+        h2{
+            width: 100%;
+            margin: auto;
+            text-align: center;  
+        }
+        span {
+            margin-left;
+        }
+        div{
+            box-sizing: border-box;
+        }
+        ul {
+            width: 100%;
+            margin-top: 30px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            
+        }
+        li {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        li:hover {
+            border-bottom: 3px solid red;
+            color: red;
+        }
+        .article {
+            width: 70%;
+            height: 60%;
+            float: left;
+        }
+        .aside {
+            width: 30%;
+            height: 75%;
+            float: right;
+            border: 1px solid gray;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .article_box {
+            float : left;
+            width: 40%;
+            height: 25%;
+            border: 1px solid gray;
+            margin: 5px 5px 5px 5px;
+            padding: 5px;
+        }
+        .footer {
+            text-align: center;
+            background-color: lightgray;
+            border: none;
+            padding: 3px;
+            margin-top: 550px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>header</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+                <li>메뉴4</li>
+                <li>메뉴5</li>
+            </ul>
+        </div>
+            <div class="article">
+                <span><h3>section</h3></span>
+                <div class="article_box">
+                    <h3>article1</h3>
+                    <p>article 내용1</p>
+                </div>
+                <div class="article_box">
+                    <h3>article2</h3>
+                    <p>article 내용2</p>
+                </div>
+                <div class="article_box">
+                    <h3>article3</h3>
+                    <p>article 내용2</p>
+                </div>
+                <div class="article_box">
+                    <h3>article4</h3>
+                    <p>article 내용4</p>
+                </div>
+                <div class="article_box">
+                    <h3>article5</h3>
+                    <p>article 내용5</p>
+                </div>
+                <div class="article_box">
+                    <h3>article6</h3>
+                    <p>article 내용6</p>
+                </div>
+            </div>
+         <div class="aside">
+              <h3>aside</h3>
+              <p>aside 내용</p>
+         </div>
+         <div class="footer">
+            <p>제작 정보, 회사 정보, 저작권</p>
+        </div>
+    </div>
+</body>
+</html>
